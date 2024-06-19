@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.contenedor {
+    display: flex;
+    width: 100%;
+}
+
+.barra-lateral {
+    
+    background-color: #161616;
+    color: #fff;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #00aaff;
+    margin-bottom: 20px;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    margin: 30px 0;
+    font-size: 25px;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+nav ul li.estado{
+    background-color: rgba(198, 227, 125, 0.5);
+}
+
+nav ul li img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+nav ul li:hover {
+    background-color: #555;
+    color: #f4f4f4;
+}
+
+nav ul li.active {
+    background-color: rgba(119, 119, 119, 0.5); 
+    color: #f4f4f4;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.contenido-principal {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+}
+
+header {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filtros-mensajes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.filtro {
+    background-color: #a5d6a7;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #161616;
+}
+
+.filtro:focus {
+    outline: none;
+}
+
+.boton-contacto {
+    background-color: #a5d6a7;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #161616;
+}
+
+.boton-contacto:hover {
+    background-color: #8ec08e;
+}
+
+.mensaje-nuevo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-bottom: 40px;
+    margin: 20px;
+}
+
+.mensaje-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.imagen-perfil {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.texto-mensaje p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.hora-mensaje p {
+    font-size: 20px;
+    color: #666;
+    margin: 0;
+}
