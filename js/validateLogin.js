@@ -1,27 +1,27 @@
-//VALIDACION DE FORMULARIO DE INSCRIPCION
+// VALIDACION DE FORMULARIO DE INSCRIPCION
 
 const form = document.querySelector('form[name="frm"]');
-form.addEventListener('submit', (event)=>{
-    const fname=form.elements['fname'].value;
-    const lname=form.elements['lname'].value;
-    const codi=form.elements['codi'].value;
-    const correo=form.elements['correo'].value;
-    const celular=form.elements['celular'].value;
+form.addEventListener('submit', (event) => {
+    const fname = form.elements['fname'].value;
+    const lname = form.elements['lname'].value;
+    const codi = form.elements['codi'].value;
+    const correo = form.elements['correo'].value;
+    const celular = form.elements['celular'].value;
 
-    if (!fname || !lname ||!correo ||!celular ||!codi){
+    if (!fname || !lname || !correo || !celular || !codi) {
         event.preventDefault();
-        alert('Por favor, Complete todos los campos')
-    }else if(!validateEmail(correo)){
+        alert('Por favor, complete todos los campos');
+    } else if (!validateEmail(correo)) {
         event.preventDefault();
-        alert('Por favor, ingrese un correo válido')
+        alert('Por favor, ingrese un correo válido');
+    } else {
+        alert('GRACIAS POR INSCRIBIRTE');
+        console.log('Redirigiendo a Login/AulaVirtual/hmtl/index1.html');
+        window.location.href = "Login/AulaVirtual/hmtl/index1.html"; 
     }
-    if(fname && lname && correo && celular && codi && validateEmail(correo)){
-        event.preventDefault();
-        alert('GRACIAS POR INCRIBIRTE')
-    }
-    
 });
-function validateEmail(correo){
+
+function validateEmail(correo) {
     const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     return re.test(String(correo).toLowerCase());
 }
