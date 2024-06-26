@@ -15,9 +15,9 @@ form.addEventListener('submit', (event) => {
         event.preventDefault();
         alert('Por favor, ingrese un correo válido');
     } else {
-        alert('GRACIAS POR INSCRIBIRTE');
-        console.log('Redirigiendo a Login/AulaVirtual/hmtl/index1.html');
-        window.location.href = "Login/AulaVirtual/hmtl/index1.html"; 
+        alert('GRACIAS POR REGISTRARSE');
+        console.log('Redirigiendo a a la pagina principal');
+        window.location.href = "AulaVirtual/hmtl/index1.html"; 
     }
 });
 
